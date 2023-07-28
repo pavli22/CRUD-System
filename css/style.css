@@ -1,0 +1,41 @@
+.btn-dark:hover {
+  background-color: white;
+  color: black;
+}
+.btn-dark {
+  transition: all 0.6s;
+}
+span {
+  background-color: rgba(139, 133, 133, 0.999);
+  color: lightskyblue;
+}
+textarea {
+  max-height: 180px;
+}
+.form-control:focus {
+  border-color: #e2e2e2;
+  outline: 0;
+  box-shadow: none;
+}
+.form-control-R:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #e2e2e2;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #ab4242f2;
+}
+.form-control-G:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #e2e2e2;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(61, 153, 70, 0.59);
+}
+input:focus::placeholder  , textarea:focus::placeholder{
+  color: transparent;
+}
+
+.icons-valid ,.icons-invalid{
+  top:30%;
+  right: 10px;
+}

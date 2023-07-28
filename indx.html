@@ -1,0 +1,102 @@
+<html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+
+      <link rel="icon" href="img/images.ico" />
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" href="css/all.min.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <title>CRUD System</title>
+    </head>
+
+    <body
+      class="bg-dark d-flex vh-100 align-items-center justify-content-center"
+    >
+      <div class="container bg-light rounded-3 my-5 p-3 shadow-lg">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <h1 class="fw-lighter mb-3">CRUD System</h1>
+                </div>
+                <div class="col-3">
+                  <input
+                    type="text"
+                    id="search-text"
+                    onkeyup="search(this.value)"
+                    class="form-control ms-auto"
+                    placeholder="search.."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="content">
+              <div class="group1 position-relative">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Product Name"
+                  id="prodName"
+                  onkeyup="Check1(this.value)"
+                />
+                <i class="fa-solid fa-check position-absolute icons-valid"></i>
+                <i
+                  class="fa-solid fa-triangle-exclamation position-absolute icons-invalid"
+                ></i>
+              </div>
+
+              <input
+                type="number"
+                class="form-control my-4"
+                placeholder="Enter Product price"
+                id="prodPrice"
+              />
+              <textarea
+                id="prodDec"
+                class="form-control my-4"
+                placeholder="Enter Product description"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <button
+                id="btn-1"
+                class="btn btn-dark"
+                onclick="getProductDetails()"
+              >
+                Add Product
+              </button>
+              <button id="btn-2" class="btn btn-dark" onclick="updateProduct()">
+                Update Product
+              </button>
+              <button class="btn btn-danger" onclick="deleteTable()">
+                Delete Data
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 overflow-auto">
+            <div class="content">
+              <table
+                class="table table-hover table-striped table-dark table-borderless text-center"
+              >
+                <thead>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Description</th>
+                  <th colspan="2">Action-option</th>
+                </thead>
+                <tbody id="demo"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+  </html>
+</html>
